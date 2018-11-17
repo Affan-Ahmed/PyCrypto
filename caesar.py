@@ -21,10 +21,14 @@ def caesar_shift(message, key, mode = 'ENCRYPT', custom_alphabet = None):
             else:
                 final_message += char
     else:
-        testalphabet = 'xyzabc'
         for char in message:
-            
+            default_alphabet = 'abcdefghijklmnopqrstuvwyz'
+            if char.isalpha():
+                if(char.islower()):
+                    final_message += custom_alphabet[(default_alphabet.index(char) + key) % len(custom_alphabet)]
+                elif(char.isupper()):
+                    final_message += custom_alphabet[(default_alphabet.index(char.lower()) + key) % len(custom_alphabet)].upper()
+            else:
+                final_message += char
     return final_message
-
-
     
