@@ -1,5 +1,4 @@
 # Main PyCrypto Class
-
 def dechiper(message, type, key):
     if(type == 'CAESAR'):
         pass
@@ -19,3 +18,5 @@ def caesar_shift(message, shift, mode = 'ENCRYPT', custom_alphabet = 'abcdefghij
     return final_message
 
 print(caesar_shift("attack from south", 1, custom_alphabet="abc"))
+print("hello")
+print("hi")
